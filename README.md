@@ -18,7 +18,7 @@ Or CDN:
 
 No further action is required.
 
-### See: [DE>MO](https://franbar1966.github.io/bootstrap-5-modal-dynamic/example/)
+### See: [DEMO](https://franbar1966.github.io/bootstrap-5-modal-dynamic/example/)
 
 
 ### Modal example

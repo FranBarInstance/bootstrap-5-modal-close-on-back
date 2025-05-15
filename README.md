@@ -1,6 +1,6 @@
 # Bootstrap 5 Modal Close on Back Button
 
-A lightweight JavaScript utility that enhances Bootstrap 5 modals to close modals when browser back button is pressed
+A lightweight JavaScript utility that enhances Bootstrap 5 modals to close modals when browser back button is pressed.
 
 It can be used in combination with: [modal dynamic](https://github.com/FranBar1966/bootstrap-5-modal-dynamic)
 

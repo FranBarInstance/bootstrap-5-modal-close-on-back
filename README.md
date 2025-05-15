@@ -6,6 +6,7 @@ It can be used in combination with: [modal dynamic](https://github.com/FranBar19
 
 ## Features
 
+- **Close a bootstrap modal with back button**
 - No dependencies other than Bootstrap 5
 - Lightweight (~1KB minified)
 - No additional configuration needed - works out of the box!

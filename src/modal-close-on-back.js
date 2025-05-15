@@ -1,44 +1,53 @@
-/*! https://github.com/FranBar1966/bootstrap-5-modal-close-on-back - Licensed under MIT */
+/*! See: https://github.com/FranBar1966/bootstrap-5-modal-close-on-back */
 
-// Problems getting window.location.hash in firefox, then use historyOpenModals
-var historyOpenModals = [];
-var skipModalHiddenEvent = false;
-var skipModalHashChangeEvent = false;
+(function(window, bootstrap) {
+    'use strict';
 
-window.addEventListener('shown.bs.modal', (ev) => {
-    // sequential only
-    if (!(ev.target.id in historyOpenModals)) {
-        historyOpenModals.push(ev.target.id);
-        window.history.pushState(null, null, '#' + ev.target.id);
-    }
-});
+    const state = {
+        historyOpenModals: [],
+        skipModalHiddenEvent: false,
+        skipModalHashChangeEvent: false
+    };
 
-window.addEventListener('hide.bs.modal', (ev) => {
-    if (skipModalHiddenEvent) {
-        skipModalHiddenEvent = false;
-        return;
-    }
+    function handleModalShown(ev) {
+        if (!ev.target.id) return;
 
-    // if close modal on close button
-    skipModalHashChangeEvent = true
-    window.history.go(-1);
-    historyOpenModals.pop(ev.target.id);
-});
-
-window.addEventListener('hashchange', (ev) => {
-    if (skipModalHashChangeEvent) {
-        skipModalHashChangeEvent = false;
-        return;
+        if (!state.historyOpenModals.includes(ev.target.id)) {
+            state.historyOpenModals.push(ev.target.id);
+            window.history.pushState(null, '', '#' + ev.target.id);
+        }
     }
 
-    // if close modal on back button
-    const lastModalId = historyOpenModals.at(-1);
-    if (lastModalId) {
-        const modal = bootstrap.Modal.getInstance('#' + lastModalId);
+    function handleModalHide(ev) {
+        if (state.skipModalHiddenEvent) {
+            state.skipModalHiddenEvent = false;
+            return;
+        }
+
+        state.skipModalHashChangeEvent = true;
+        window.history.go(-1);
+        state.historyOpenModals = state.historyOpenModals.filter(id => id !== ev.target.id);
+    }
+
+    function handleHashChange(ev) {
+        if (state.skipModalHashChangeEvent) {
+            state.skipModalHashChangeEvent = false;
+            return;
+        }
+
+        const lastModalId = state.historyOpenModals[state.historyOpenModals.length - 1];
+        if (!lastModalId) return;
+
+        const modal = bootstrap.Modal.getInstance(document.getElementById(lastModalId));
         if (modal) {
-            skipModalHiddenEvent = true
-            historyOpenModals.pop(lastModalId);
+            state.skipModalHiddenEvent = true;
+            state.historyOpenModals = state.historyOpenModals.filter(id => id !== lastModalId);
             modal.hide();
         }
     }
-});
+
+    window.addEventListener('shown.bs.modal', handleModalShown);
+    window.addEventListener('hide.bs.modal', handleModalHide);
+    window.addEventListener('hashchange', handleHashChange);
+
+})(window, bootstrap || {});

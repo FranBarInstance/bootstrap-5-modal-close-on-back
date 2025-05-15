@@ -62,6 +62,19 @@ Simply include the script after Bootstrap 5 - no additional configuration needed
 
 <script src="https://cdn.jsdelivr.net/gh/FranBar1966/bootstrap-5-modal-close-on-back@master/src/modal-close-on-back.min.js"></script>
 ```
+
+## How It Works
+
+This is a lightweight JavaScript utility that enhances Bootstrap 5 modals by allowing them to close when the user clicks the browser's Back button .
+
+Browsers do not automatically close modals when the back button is pressed. This utility adds that behavior to make your application more intuitive and consistent with user expectations. Especially if it is a PWA for mobile devices.
+
+### What it does
+
+If the user clicks the close button in the modal, the browser goes back one step in the history using window.history.go(-1).
+
+If the user presses the browser's back button (hashchange event), the utility detects this and closes the last open modal.
+
 ## Contributing
 
 We welcome contributions to this project. If you have suggestions for improvements or want to report issues, please create an issue or submit a pull request.

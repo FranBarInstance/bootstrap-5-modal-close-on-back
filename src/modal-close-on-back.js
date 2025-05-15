@@ -1,5 +1,9 @@
 /*! See: https://github.com/FranBar1966/bootstrap-5-modal-close-on-back */
 
+/*
+ * Bootstrap 5 close a modal with back button
+ * https://github.com/FranBar1966/bootstrap-5-modal-close-on-back
+ */
 (function(window, bootstrap) {
     'use strict';
 

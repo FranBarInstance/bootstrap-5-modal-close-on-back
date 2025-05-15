@@ -9,6 +9,7 @@ It can be used in combination with: [modal dynamic](https://github.com/FranBar19
 - **Close a bootstrap modal with back button**
 - **Preserves all native** Bootstrap modal functionality
 - **No conflicts** with existing modal implementations
+- No jquery dependency
 - No dependencies other than Bootstrap 5
 - Lightweight (~1KB minified)
 - No additional configuration needed - works out of the box!
@@ -61,6 +62,14 @@ Simply include the script after Bootstrap 5 - no additional configuration needed
 
 <script src="https://cdn.jsdelivr.net/gh/FranBar1966/bootstrap-5-modal-close-on-back@master/src/modal-close-on-back.min.js"></script>
 ```
+## Contributing
+
+We welcome contributions to this project. If you have suggestions for improvements or want to report issues, please create an issue or submit a pull request.
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes.
+4. Submit a pull request.
 
 ## License
 

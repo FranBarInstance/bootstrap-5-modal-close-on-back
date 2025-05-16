@@ -19,7 +19,7 @@ It can be used in combination with: [modal dynamic](https://github.com/FranBar19
 ### Via CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/FranBar1966/bootstrap-5-modal-close-on-back@master/src/modal-close-on-back.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/FranBar1966/bootstrap-5-modal-close-on-back@0.0.1/src/modal-close-on-back.min.js"></script>
 ```
 
 ### Download
@@ -60,7 +60,7 @@ Simply include the script after Bootstrap 5 - no additional configuration needed
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/gh/FranBar1966/bootstrap-5-modal-close-on-back@master/src/modal-close-on-back.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/FranBar1966/bootstrap-5-modal-close-on-back@0.0.1/src/modal-close-on-back.min.js"></script>
 ```
 
 ## How It Works

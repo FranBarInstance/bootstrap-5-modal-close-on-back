@@ -2,7 +2,7 @@
 
 A lightweight JavaScript utility that enhances Bootstrap 5 modals to close modals when browser back button is pressed.
 
-It can be used in combination with: [modal dynamic](https://github.com/FranBar1966/bootstrap-5-modal-dynamic)
+It can be used in combination with: [modal dynamic](https://github.com/franbarinstance/bootstrap-5-modal-dynamic)
 
 ## Features
 
@@ -19,12 +19,12 @@ It can be used in combination with: [modal dynamic](https://github.com/FranBar19
 ### Via CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/FranBar1966/bootstrap-5-modal-close-on-back@0.0.1/src/modal-close-on-back.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/franbarinstance/bootstrap-5-modal-close-on-back@0.0.1/src/modal-close-on-back.min.js"></script>
 ```
 
 ### Download
 
-Download the script from GitHub repository: [close on back button](https://github.com/FranBar1966/bootstrap-5-modal-close-on-back) and include in your HTML:
+Download the script from GitHub repository: [close on back button](https://github.com/franbarinstance/bootstrap-5-modal-close-on-back) and include in your HTML:
 
 ```html
 <script src="path/to/modal-close-on-back.min.js"></script>
@@ -34,7 +34,7 @@ Download the script from GitHub repository: [close on back button](https://githu
 
 Simply include the script after Bootstrap 5 - no additional configuration needed. You can add the script to your current html without making any changes at all.
 
-### See: [DEMO](https://franbar1966.github.io/bootstrap-5-modal-dynamic/example/)
+### See: [DEMO](https://franbarinstance.github.io/bootstrap-5-modal-dynamic/example/)
 
 ### Modal example
 
@@ -60,7 +60,7 @@ Simply include the script after Bootstrap 5 - no additional configuration needed
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/gh/FranBar1966/bootstrap-5-modal-close-on-back@0.0.1/src/modal-close-on-back.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/franbarinstance/bootstrap-5-modal-close-on-back@0.0.1/src/modal-close-on-back.min.js"></script>
 ```
 
 ## How It Works
